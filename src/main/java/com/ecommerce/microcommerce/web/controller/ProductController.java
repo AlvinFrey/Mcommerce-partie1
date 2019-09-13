@@ -124,4 +124,12 @@ public class ProductController {
         return marges;
     }
 
+    @RequestMapping(value = "/triAlphabetique", method = RequestMethod.GET)
+
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+
+        return productDao.findByOrderByNomAsc();
+
+    }
+
 }
